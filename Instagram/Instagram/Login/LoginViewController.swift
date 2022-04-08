@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextField()
     }
 
     @IBAction func loginBtnClick(_ sender: Any) {
@@ -25,6 +26,10 @@ class LoginViewController: UIViewController {
     @IBAction func SignupBtnClick(_ sender: Any) {
         guard let signupNameVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupNameViewController") else { return }
         self.navigationController?.pushViewController(signupNameVC, animated: true)
+    }
+    
+    private func setTextField() {
+        nameTextField.clearButtonMode = .whileEditing
     }
     
 }
