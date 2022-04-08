@@ -10,9 +10,12 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setButton()
         setTextField()
     }
 
@@ -28,8 +31,25 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
     
+    private func setButton() {
+        loginBtn.layer.cornerRadius = 5
+    }
+    
     private func setTextField() {
+        // 삭제 버튼
         nameTextField.clearButtonMode = .whileEditing
+        // 이름, 비밀번호 값 채워지면 로그인 버튼 활성화
+        [nameTextField, passwordTextField].forEach({ $0?.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged) })
+    }
+    
+    @objc func textFieldChanged(_ textField: UITextField) {
+        if (nameTextField.hasText && passwordTextField.hasText) {
+            loginBtn.backgroundColor = .systemBlue
+            loginBtn.isEnabled = true
+        } else {
+            loginBtn.backgroundColor = .systemBlue.withAlphaComponent(0.5)
+            loginBtn.isEnabled = false
+        }
     }
     
 }
