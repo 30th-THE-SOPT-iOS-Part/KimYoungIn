@@ -38,10 +38,10 @@ class SignupPasswordViewController: UIViewController {
     
     private func setTextField() {
         passwordTextField.clearButtonMode = .whileEditing
-        passwordTextField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
     }
     
-    @objc func textFieldChanged(_ textField: UITextField) {
+    @objc func editingChanged(_ textField: UITextField) {
         if (passwordTextField.hasText) {
             nextBtn.backgroundColor = .systemBlue
             nextBtn.isEnabled = true

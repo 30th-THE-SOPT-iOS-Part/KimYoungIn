@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordShownBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
@@ -18,7 +19,7 @@ class LoginViewController: UIViewController {
         setButton()
         setTextField()
     }
-
+    
     @IBAction func loginBtnClick(_ sender: Any) {
         guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController else { return }
         successVC.name = nameTextField.text
@@ -31,6 +32,16 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
     
+    // 눈 모양 아이콘 클릭 이벤트
+    @IBAction func passwordShownBtnClick(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        if (sender.isSelected) {
+            passwordTextField.isSecureTextEntry = false
+        } else {
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
+    
     private func setButton() {
         loginBtn.layer.cornerRadius = 5
     }
@@ -39,10 +50,10 @@ class LoginViewController: UIViewController {
         // 삭제 버튼
         nameTextField.clearButtonMode = .whileEditing
         // 이름, 비밀번호 값 채워지면 로그인 버튼 활성화
-        [nameTextField, passwordTextField].forEach({ $0?.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged) })
+        [nameTextField, passwordTextField].forEach({ $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged) })
     }
     
-    @objc func textFieldChanged(_ textField: UITextField) {
+    @objc func editingChanged(_ textField: UITextField) {
         if (nameTextField.hasText && passwordTextField.hasText) {
             loginBtn.backgroundColor = .systemBlue
             loginBtn.isEnabled = true

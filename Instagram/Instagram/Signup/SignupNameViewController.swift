@@ -34,10 +34,10 @@ class SignupNameViewController: UIViewController {
     
     private func setTextField() {
         nameTextField.clearButtonMode = .whileEditing
-        nameTextField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        nameTextField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
     }
     
-    @objc func textFieldChanged(_ textField: UITextField) {
+    @objc func editingChanged(_ textField: UITextField) {
         if (nameTextField.hasText) {
             nextBtn.backgroundColor = .systemBlue
             nextBtn.isEnabled = true

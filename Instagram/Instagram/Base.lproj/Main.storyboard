@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="45" id="PoO-Mk-j0B"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-Xf-Bx5">
                                 <rect key="frame" x="280" y="409" width="114" height="27"/>
@@ -84,6 +84,15 @@
                                     <constraint firstItem="bed-w5-yjF" firstAttribute="leading" secondItem="Mwj-zL-jFr" secondAttribute="leading" id="uao-9H-gXc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-lo-gSs">
+                                <rect key="frame" x="364" y="365.5" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="pw_hidden"/>
+                                <state key="selected" image="pw_shown"/>
+                                <connections>
+                                    <action selector="passwordShownBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBB-rU-Sfb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -96,7 +105,9 @@
                             <constraint firstItem="tfR-dg-Jkh" firstAttribute="top" secondItem="ldV-Xf-Bx5" secondAttribute="bottom" constant="30" id="dG5-rF-UeL"/>
                             <constraint firstItem="TEI-rw-vsI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZu-dS-6xC"/>
                             <constraint firstItem="X4w-Ph-MDm" firstAttribute="top" secondItem="TEI-rw-vsI" secondAttribute="bottom" constant="50" id="fLy-QL-8dZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPn-lo-gSs" secondAttribute="trailing" constant="30" id="hZy-JA-eCt"/>
                             <constraint firstItem="X4w-Ph-MDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hno-O2-l8w"/>
+                            <constraint firstItem="bPn-lo-gSs" firstAttribute="centerY" secondItem="Kz8-ZV-ZL7" secondAttribute="centerY" id="ir7-w2-lzO"/>
                             <constraint firstItem="Mwj-zL-jFr" firstAttribute="top" secondItem="tfR-dg-Jkh" secondAttribute="bottom" constant="20" id="k0r-D4-Vvj"/>
                             <constraint firstItem="ldV-Xf-Bx5" firstAttribute="top" secondItem="Kz8-ZV-ZL7" secondAttribute="bottom" constant="10" id="s5W-7s-JjO"/>
                             <constraint firstItem="Mwj-zL-jFr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vv9-wf-3so"/>
@@ -109,6 +120,7 @@
                     <connections>
                         <outlet property="loginBtn" destination="tfR-dg-Jkh" id="0Np-63-EHR"/>
                         <outlet property="nameTextField" destination="X4w-Ph-MDm" id="00f-Ke-fMm"/>
+                        <outlet property="passwordShownBtn" destination="bPn-lo-gSs" id="5Yc-LT-D8Y"/>
                         <outlet property="passwordTextField" destination="Kz8-ZV-ZL7" id="dus-Dh-PBk"/>
                     </connections>
                 </viewController>
@@ -240,7 +252,7 @@
                                     <constraint firstAttribute="height" constant="45" id="22y-YC-jBi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-LJ-Tpy">
                                 <rect key="frame" x="20" y="323.5" width="374" height="45"/>
@@ -356,6 +368,8 @@
     <resources>
         <image name="back" width="24.5" height="24"/>
         <image name="instagram" width="175" height="50"/>
+        <image name="pw_hidden" width="20" height="20"/>
+        <image name="pw_shown" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
