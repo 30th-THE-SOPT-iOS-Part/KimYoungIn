@@ -9,13 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func loginBtnClick(_ sender: Any) {
-        guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") else { return }
+        guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController else { return }
+        successVC.name = nameTextField.text
         successVC.modalPresentationStyle = .fullScreen
         self.present(successVC, animated: true)
     }

@@ -9,9 +9,10 @@ import UIKit
 
 class SignupNameViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func backBtnClick(_ sender: Any) {
@@ -19,7 +20,8 @@ class SignupNameViewController: UIViewController {
     }
     
     @IBAction func goToPasswordVC(_ sender: Any) {
-        guard let signupPasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupPasswordViewController") else { return }
+        guard let signupPasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupPasswordViewController") as? SignupPasswordViewController else { return }
+        signupPasswordVC.name = nameTextField.text
         self.navigationController?.pushViewController(signupPasswordVC, animated: true)
     }
     

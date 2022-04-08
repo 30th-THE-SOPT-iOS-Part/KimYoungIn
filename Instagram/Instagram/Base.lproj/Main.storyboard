@@ -110,6 +110,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cim-Wv-Fqa"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="X4w-Ph-MDm" id="00f-Ke-fMm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +191,9 @@
                             <constraint firstAttribute="trailing" secondItem="CMV-br-M23" secondAttribute="trailing" constant="35" id="sXa-FV-no5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="7WM-1g-hOH" id="S1L-1M-1bB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CY-ta-kjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,6 +345,9 @@
                             <constraint firstItem="XHP-7h-EEc" firstAttribute="leading" secondItem="MGC-JT-fh4" secondAttribute="leading" constant="50" id="XTq-GL-DlL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="XHP-7h-EEc" id="FAb-fR-rgA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ket-pg-G9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

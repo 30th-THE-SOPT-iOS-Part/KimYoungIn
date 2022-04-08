@@ -9,6 +9,8 @@ import UIKit
 
 class SignupPasswordViewController: UIViewController {
 
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,7 +20,8 @@ class SignupPasswordViewController: UIViewController {
     }
     
     @IBAction func goToSuccessVC(_ sender: Any) {
-        guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") else { return }
+        guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController else { return }
+        successVC.name = self.name
         successVC.modalPresentationStyle = .fullScreen
         self.present(successVC, animated: true)
         self.navigationController?.popToRootViewController(animated: true)
