@@ -65,15 +65,39 @@
 				A932743A27FFE175001B0EDB /* AppDelegate.swift */,
 				A932743C27FFE175001B0EDB /* SceneDelegate.swift */,
 				A932744027FFE175001B0EDB /* Main.storyboard */,
-				A932743E27FFE175001B0EDB /* LoginViewController.swift */,
-				A932745427FFFB0C001B0EDB /* SignupNameViewController.swift */,
-				A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */,
-				A932745827FFFB27001B0EDB /* SuccessViewController.swift */,
+				A932745A2800042E001B0EDB /* Login */,
+				A932745B2800043D001B0EDB /* Signup */,
+				A932745C28000450001B0EDB /* Success */,
 				A932744327FFE176001B0EDB /* Assets.xcassets */,
 				A932744527FFE176001B0EDB /* LaunchScreen.storyboard */,
 				A932744827FFE176001B0EDB /* Info.plist */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		A932745A2800042E001B0EDB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A932743E27FFE175001B0EDB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A932745B2800043D001B0EDB /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A932745427FFFB0C001B0EDB /* SignupNameViewController.swift */,
+				A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		A932745C28000450001B0EDB /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				A932745827FFFB27001B0EDB /* SuccessViewController.swift */,
+			);
+			path = Success;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

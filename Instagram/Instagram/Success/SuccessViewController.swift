@@ -11,7 +11,10 @@ class SuccessViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
+    @IBAction func successBtnClick(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
