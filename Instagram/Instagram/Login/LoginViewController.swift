@@ -20,26 +20,24 @@ class LoginViewController: UIViewController {
         setTextField()
     }
     
-    @IBAction func loginBtnClick(_ sender: Any) {
-        guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController else { return }
+    @IBAction func loginBtnDidTap(_ sender: Any) {
+        let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
+        guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
         successVC.name = nameTextField.text
         successVC.modalPresentationStyle = .fullScreen
         self.present(successVC, animated: true)
     }
     
-    @IBAction func SignupBtnClick(_ sender: Any) {
-        guard let signupNameVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupNameViewController") else { return }
+    @IBAction func signupBtnDidTap(_ sender: Any) {
+        let signupNameSB = UIStoryboard.init(name: Const.Storyboard.Name.signupName, bundle: nil)
+        guard let signupNameVC = signupNameSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupNameVC) as? SignupNameViewController else { return }
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
     
     // 눈 모양 아이콘 클릭 이벤트
-    @IBAction func passwordShownBtnClick(_ sender: UIButton) {
+    @IBAction func passwordShownBtnDidTap(_ sender: UIButton) {
         sender.isSelected.toggle()
-        if (sender.isSelected) {
-            passwordTextField.isSecureTextEntry = false
-        } else {
-            passwordTextField.isSecureTextEntry = true
-        }
+        passwordTextField.isSecureTextEntry = !sender.isSelected
     }
     
     private func setButton() {
@@ -47,9 +45,7 @@ class LoginViewController: UIViewController {
     }
     
     private func setTextField() {
-        // 삭제 버튼
         nameTextField.clearButtonMode = .whileEditing
-        // 이름, 비밀번호 값 채워지면 로그인 버튼 활성화
         [nameTextField, passwordTextField].forEach({ $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged) })
     }
     

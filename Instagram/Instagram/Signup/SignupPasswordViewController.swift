@@ -20,12 +20,13 @@ class SignupPasswordViewController: UIViewController {
         setTextField()
     }
     
-    @IBAction func backBtnClick(_ sender: Any) {
+    @IBAction func backBtnDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func goToSuccessVC(_ sender: Any) {
-        guard let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController else { return }
+        let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
+        guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
         successVC.name = self.name
         successVC.modalPresentationStyle = .fullScreen
         self.present(successVC, animated: true)

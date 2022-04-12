@@ -18,7 +18,7 @@ class SuccessViewController: UIViewController {
         setLabel()
     }
     
-    @IBAction func successBtnClick(_ sender: Any) {
+    @IBAction func successBtnDidTap(_ sender: Any) {
         dismiss(animated: true)
     }
     

@@ -18,12 +18,13 @@ class SignupNameViewController: UIViewController {
         setTextField()
     }
 
-    @IBAction func backBtnClick(_ sender: Any) {
+    @IBAction func backBtnDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func goToPasswordVC(_ sender: Any) {
-        guard let signupPasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupPasswordViewController") as? SignupPasswordViewController else { return }
+        let signupPasswordSB = UIStoryboard.init(name: Const.Storyboard.Name.signupPassword, bundle: nil)
+        guard let signupPasswordVC = signupPasswordSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupPasswordVC) as? SignupPasswordViewController else { return }
         signupPasswordVC.name = nameTextField.text
         self.navigationController?.pushViewController(signupPasswordVC, animated: true)
     }
