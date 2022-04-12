@@ -1,27 +1,14 @@
 //
-//  Const.swift
+//  ViewController.swift
 //  Instagram
 //
 //  Created by 김영인 on 2022/04/12.
 //
 
-struct Const {
-    
-}
+import Foundation
 
 extension Const {
-    struct Storyboard {
-        struct Name {
-            static let main = "Main"
-            static let login = "Login"
-            static let signupName = "SignupName"
-            static let signupPassword = "SignupPassword"
-            static let success = "Success"
-        }
-    }
-}
-
-extension Const {
+    // ViewController 의 identifier 을 상수로 관리합니다.
     struct ViewController {
         struct Identifier {
             static let loginVC = "LoginViewController"

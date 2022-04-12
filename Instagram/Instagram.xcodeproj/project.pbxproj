@@ -13,6 +13,8 @@
 		A90900782805668600089CCA /* SignupName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900772805668600089CCA /* SignupName.storyboard */; };
 		A909007A2805669300089CCA /* Success.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900792805669300089CCA /* Success.storyboard */; };
 		A909007C280566C900089CCA /* SignupPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A909007B280566C900089CCA /* SignupPassword.storyboard */; };
+		A909007E280595C200089CCA /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909007D280595C200089CCA /* Storyboard.swift */; };
+		A9090080280595CA00089CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909007F280595CA00089CCA /* ViewController.swift */; };
 		A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743A27FFE175001B0EDB /* AppDelegate.swift */; };
 		A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743C27FFE175001B0EDB /* SceneDelegate.swift */; };
 		A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743E27FFE175001B0EDB /* LoginViewController.swift */; };
@@ -30,6 +32,8 @@
 		A90900772805668600089CCA /* SignupName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupName.storyboard; sourceTree = "<group>"; };
 		A90900792805669300089CCA /* Success.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Success.storyboard; sourceTree = "<group>"; };
 		A909007B280566C900089CCA /* SignupPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupPassword.storyboard; sourceTree = "<group>"; };
+		A909007D280595C200089CCA /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		A909007F280595CA00089CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A932743727FFE175001B0EDB /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932743A27FFE175001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932743C27FFE175001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 				A932743A27FFE175001B0EDB /* AppDelegate.swift */,
 				A932743C27FFE175001B0EDB /* SceneDelegate.swift */,
 				A90900752805667A00089CCA /* Main.storyboard */,
-				A93274AA28056384001B0EDB /* Const */,
+				A93274AA28056384001B0EDB /* Constants */,
 				A932745A2800042E001B0EDB /* Login */,
 				A932745B2800043D001B0EDB /* Signup */,
 				A932745D28011BB3001B0EDB /* Success */,
@@ -115,12 +119,14 @@
 			path = Success;
 			sourceTree = "<group>";
 		};
-		A93274AA28056384001B0EDB /* Const */ = {
+		A93274AA28056384001B0EDB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				A90900712805643E00089CCA /* Const.swift */,
+				A909007D280595C200089CCA /* Storyboard.swift */,
+				A909007F280595CA00089CCA /* ViewController.swift */,
 			);
-			path = Const;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +207,9 @@
 				A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */,
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,
 				A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */,
+				A9090080280595CA00089CCA /* ViewController.swift in Sources */,
 				A932745727FFFB1D001B0EDB /* SignupPasswordViewController.swift in Sources */,
+				A909007E280595C200089CCA /* Storyboard.swift in Sources */,
 				A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */,
 				A932745527FFFB0C001B0EDB /* SignupNameViewController.swift in Sources */,
 				A90900722805643E00089CCA /* Const.swift in Sources */,
