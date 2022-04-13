@@ -16,44 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVg-DX-EuV">
-                                <rect key="frame" x="96.5" y="116.5" width="221" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-sl-J3G">
-                                <rect key="frame" x="35" y="182.5" width="344" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqr-Lg-fdN">
-                                <rect key="frame" x="20" y="248.5" width="374" height="45"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oam-I6-6fS" userLabel="사용자 이름 만들기">
+                                <rect key="frame" x="0.0" y="84" width="414" height="222"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVg-DX-EuV">
+                                        <rect key="frame" x="96.5" y="0.0" width="221" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-sl-J3G">
+                                        <rect key="frame" x="76" y="56" width="262" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="262" id="5bj-M5-Bvd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqr-Lg-fdN">
+                                        <rect key="frame" x="16" y="112" width="382" height="45"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="BeJ-V7-X2Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyE-a4-GwM">
+                                        <rect key="frame" x="16" y="177" width="382" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Glj-Qr-mpP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="다음">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToPasswordVC:" destination="68x-3m-veG" eventType="touchUpInside" id="AQc-uH-PWa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="BeJ-V7-X2Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="kyE-a4-GwM" secondAttribute="trailing" constant="16" id="I5V-qg-TAO"/>
+                                    <constraint firstItem="Bqr-Lg-fdN" firstAttribute="leading" secondItem="oam-I6-6fS" secondAttribute="leading" constant="16" id="QK2-9p-STl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bqr-Lg-fdN" secondAttribute="trailing" constant="16" id="WKQ-4v-WOD"/>
+                                    <constraint firstItem="kyE-a4-GwM" firstAttribute="leading" secondItem="oam-I6-6fS" secondAttribute="leading" constant="16" id="ugI-zq-X2X"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" textContentType="username"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyE-a4-GwM">
-                                <rect key="frame" x="20" y="323.5" width="374" height="45"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Glj-Qr-mpP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="다음">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToPasswordVC:" destination="68x-3m-veG" eventType="touchUpInside" id="AQc-uH-PWa"/>
-                                </connections>
-                            </button>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-l0-vMA">
-                                <rect key="frame" x="10" y="54" width="25" height="24"/>
+                                <rect key="frame" x="10" y="54" width="24.5" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -64,19 +78,11 @@
                         <viewLayoutGuide key="safeArea" id="I7F-be-7KK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kyE-a4-GwM" secondAttribute="trailing" constant="20" id="5Cd-6l-gaD"/>
-                            <constraint firstItem="Bqr-Lg-fdN" firstAttribute="leading" secondItem="I7F-be-7KK" secondAttribute="leading" constant="20" id="JVi-p2-WZD"/>
-                            <constraint firstItem="4ht-sl-J3G" firstAttribute="top" secondItem="hVg-DX-EuV" secondAttribute="bottom" constant="30" id="JlU-RJ-Bik"/>
-                            <constraint firstItem="Gel-l0-vMA" firstAttribute="top" secondItem="I7F-be-7KK" secondAttribute="top" constant="10" id="Kc8-Dc-sV1"/>
-                            <constraint firstItem="kyE-a4-GwM" firstAttribute="top" secondItem="Bqr-Lg-fdN" secondAttribute="bottom" constant="30" id="Rvm-OQ-GGE"/>
-                            <constraint firstItem="kyE-a4-GwM" firstAttribute="leading" secondItem="I7F-be-7KK" secondAttribute="leading" constant="20" id="Z6G-lP-sq2"/>
-                            <constraint firstItem="4ht-sl-J3G" firstAttribute="leading" secondItem="I7F-be-7KK" secondAttribute="leading" constant="35" id="aws-eO-TEy"/>
-                            <constraint firstAttribute="trailing" secondItem="4ht-sl-J3G" secondAttribute="trailing" constant="35" id="bJ4-qL-HRw"/>
-                            <constraint firstItem="I7F-be-7KK" firstAttribute="trailing" secondItem="Bqr-Lg-fdN" secondAttribute="trailing" constant="20" id="juh-bQ-x9Y"/>
-                            <constraint firstItem="Bqr-Lg-fdN" firstAttribute="top" secondItem="4ht-sl-J3G" secondAttribute="bottom" constant="30" id="mV0-7Z-uMw"/>
-                            <constraint firstItem="Gel-l0-vMA" firstAttribute="leading" secondItem="I7F-be-7KK" secondAttribute="leading" constant="10" id="muq-uA-ThC"/>
-                            <constraint firstItem="hVg-DX-EuV" firstAttribute="centerX" secondItem="nk4-uB-Px9" secondAttribute="centerX" id="wNz-7a-oR6"/>
-                            <constraint firstItem="hVg-DX-EuV" firstAttribute="centerY" secondItem="nk4-uB-Px9" secondAttribute="centerY" multiplier="0.3" id="xt9-lm-nMX"/>
+                            <constraint firstItem="oam-I6-6fS" firstAttribute="leading" secondItem="I7F-be-7KK" secondAttribute="leading" id="IsM-oj-iZO"/>
+                            <constraint firstItem="oam-I6-6fS" firstAttribute="top" secondItem="Gel-l0-vMA" secondAttribute="bottom" constant="6" id="WoE-mf-ql9"/>
+                            <constraint firstItem="Gel-l0-vMA" firstAttribute="top" secondItem="I7F-be-7KK" secondAttribute="top" constant="10" id="XcJ-g9-Uki"/>
+                            <constraint firstItem="Gel-l0-vMA" firstAttribute="leading" secondItem="I7F-be-7KK" secondAttribute="leading" constant="10" id="aJx-Iv-Xqk"/>
+                            <constraint firstAttribute="trailing" secondItem="oam-I6-6fS" secondAttribute="trailing" id="wAf-yZ-pnx"/>
                         </constraints>
                     </view>
                     <connections>
