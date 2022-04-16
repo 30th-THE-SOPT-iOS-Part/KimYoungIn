@@ -19,6 +19,14 @@ class SuccessViewController: UIViewController {
     }
     
     @IBAction func successBtnDidTap(_ sender: Any) {
+        let tabBarSB = UIStoryboard(name: Const.Storyboard.Name.tabBar, bundle: nil)
+        guard let tabBarController = tabBarSB.instantiateViewController(withIdentifier: Const.TabBarController.Identifier.tabBarController) as? TabBarController else { return }
+        tabBarController.modalPresentationStyle = .fullScreen
+        tabBarController.modalTransitionStyle = .crossDissolve
+        self.present(tabBarController, animated: true)
+    }
+    
+    @IBAction func otherAccountBtnDidTap(_ sender: Any) {
         dismiss(animated: true)
     }
     

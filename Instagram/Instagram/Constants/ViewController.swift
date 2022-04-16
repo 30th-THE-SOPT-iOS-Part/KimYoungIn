@@ -22,4 +22,10 @@ extension Const {
             static let profileVC = "ProfileViewController"
         }
     }
+    
+    struct TabBarController {
+        struct Identifier {
+            static let tabBarController = "TabBarController"
+        }
+    }
 }

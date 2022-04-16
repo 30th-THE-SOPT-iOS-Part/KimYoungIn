@@ -12,6 +12,7 @@ extension Const {
     struct Storyboard {
         struct Name {
             static let main = "Main"
+            static let tabBar = "TabBar"
             static let login = "Login"
             static let signupName = "SignupName"
             static let signupPassword = "SignupPassword"

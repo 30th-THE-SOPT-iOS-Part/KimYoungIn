@@ -20,6 +20,10 @@ class LoginViewController: UIViewController {
         setTextField()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        removeTextField()
+    }
+    
     @IBAction func loginBtnDidTap(_ sender: Any) {
         let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
         guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
@@ -40,13 +44,21 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = !sender.isSelected
     }
     
+    private func removeTextField() {
+        [nameTextField, passwordTextField].forEach {
+            $0?.text?.removeAll()
+        }
+    }
+    
     private func setButton() {
         loginBtn.layer.cornerRadius = 5
     }
     
     private func setTextField() {
         nameTextField.clearButtonMode = .whileEditing
-        [nameTextField, passwordTextField].forEach({ $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged) })
+        [nameTextField, passwordTextField].forEach {
+            $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
+        }
     }
     
     @objc func editingChanged(_ textField: UITextField) {
