@@ -26,6 +26,7 @@
 		A90900C2280AC6D200089CCA /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C1280AC6D200089CCA /* ReelsViewController.swift */; };
 		A90900C4280AC6D700089CCA /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C3280AC6D700089CCA /* ShopViewController.swift */; };
 		A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C5280AC6DD00089CCA /* ProfileViewController.swift */; };
+		A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C7280ACD8B00089CCA /* TabBarController.swift */; };
 		A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743A27FFE175001B0EDB /* AppDelegate.swift */; };
 		A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743C27FFE175001B0EDB /* SceneDelegate.swift */; };
 		A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743E27FFE175001B0EDB /* LoginViewController.swift */; };
@@ -56,6 +57,7 @@
 		A90900C1280AC6D200089CCA /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
 		A90900C3280AC6D700089CCA /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		A90900C5280AC6DD00089CCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A90900C7280ACD8B00089CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A932743727FFE175001B0EDB /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932743A27FFE175001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932743C27FFE175001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A90900AC280AC5BA00089CCA /* TabBar.storyboard */,
+				A90900C7280ACD8B00089CCA /* TabBarController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */,
 				A90900C0280AC6CC00089CCA /* SearchViewController.swift in Sources */,
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,
+				A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */,
 				A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */,
 				A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */,
 				A90900C4280AC6D700089CCA /* ShopViewController.swift in Sources */,
