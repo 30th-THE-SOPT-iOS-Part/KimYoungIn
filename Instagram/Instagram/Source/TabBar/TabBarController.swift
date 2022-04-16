@@ -57,7 +57,7 @@ class TabBarController: UITabBarController {
             selectedImage: Const.Icon.profileSelected
         )
         
-        setViewControllers([homeVC, searchVC, reelsVC, shopVC, profileVC], animated: true)
+        setViewControllers([homeVC, searchVC, reelsVC, shopVC, profileVC], animated: false)
     }
     
     private func setTabBarColor(_ isReels: Bool) {

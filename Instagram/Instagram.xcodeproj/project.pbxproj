@@ -28,6 +28,7 @@
 		A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C5280AC6DD00089CCA /* ProfileViewController.swift */; };
 		A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C7280ACD8B00089CCA /* TabBarController.swift */; };
 		A90900CA280AEF8600089CCA /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C9280AEF8600089CCA /* Icon.swift */; };
+		A90900CE280AFB2B00089CCA /* ViewController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900CD280AFB2B00089CCA /* ViewController++.swift */; };
 		A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743A27FFE175001B0EDB /* AppDelegate.swift */; };
 		A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743C27FFE175001B0EDB /* SceneDelegate.swift */; };
 		A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743E27FFE175001B0EDB /* LoginViewController.swift */; };
@@ -60,6 +61,7 @@
 		A90900C5280AC6DD00089CCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A90900C7280ACD8B00089CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A90900C9280AEF8600089CCA /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		A90900CD280AFB2B00089CCA /* ViewController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController++.swift"; sourceTree = "<group>"; };
 		A932743727FFE175001B0EDB /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932743A27FFE175001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932743C27FFE175001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		A90900CC280AFB1900089CCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A90900CD280AFB2B00089CCA /* ViewController++.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A932742E27FFE175001B0EDB = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 				A932743C27FFE175001B0EDB /* SceneDelegate.swift */,
 				A90900752805667A00089CCA /* Main.storyboard */,
 				A93274AA28056384001B0EDB /* Constants */,
+				A90900CC280AFB1900089CCA /* Extensions */,
 				A90900CB280AF17400089CCA /* Source */,
 				A932744327FFE176001B0EDB /* Assets.xcassets */,
 				A932744527FFE176001B0EDB /* LaunchScreen.storyboard */,
@@ -306,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */,
+				A90900CE280AFB2B00089CCA /* ViewController++.swift in Sources */,
 				A90900C0280AC6CC00089CCA /* SearchViewController.swift in Sources */,
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,
 				A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */,
