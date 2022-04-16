@@ -15,6 +15,11 @@ extension Const {
             static let signupNameVC = "SignupNameViewController"
             static let signupPasswordVC = "SignupPasswordViewController"
             static let successVC = "SuccessViewController"
+            static let homeVC =  "HomeViewController"
+            static let searchVC = "SearchViewController"
+            static let reelsVC = "ReelsViewController"
+            static let shopVC = "ShopViewController"
+            static let profileVC = "ProfileViewController"
         }
     }
 }

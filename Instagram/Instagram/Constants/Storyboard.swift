@@ -16,6 +16,11 @@ extension Const {
             static let signupName = "SignupName"
             static let signupPassword = "SignupPassword"
             static let success = "Success"
+            static let home = "Home"
+            static let search = "Search"
+            static let reels = "Reels"
+            static let shop = "Shop"
+            static let profile = "Profile"
         }
     }
 }
