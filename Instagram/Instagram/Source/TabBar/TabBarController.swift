@@ -14,7 +14,8 @@ class TabBarController: UITabBarController {
         setTabBarController()
     }
     
-    func setTabBarController() {
+    private func setTabBarController() {
+        self.delegate = self
         
         let homeSB = UIStoryboard.init(name: Const.Storyboard.Name.home, bundle: nil)
         let searchSB = UIStoryboard.init(name: Const.Storyboard.Name.search, bundle: nil)
@@ -58,10 +59,25 @@ class TabBarController: UITabBarController {
         
         setViewControllers([homeVC, searchVC, reelsVC, shopVC, profileVC], animated: true)
     }
+    
+    private func setTabBarColor(_ isReels: Bool) {
+        if isReels {
+            tabBar.backgroundColor = .black
+            tabBar.tintColor = .white
+            tabBar.barTintColor = .white
+        } else {
+            tabBar.backgroundColor = .white
+            tabBar.tintColor = .black
+            tabBar.barTintColor = .black
+        }
+    }
+    
 }
 
 extension TabBarController: UITabBarControllerDelegate {
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("\(item)")
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        viewController.restorationIdentifier == Const.ViewController.Identifier.reelsVC ? setTabBarColor(true) : setTabBarColor(false)
     }
+    
 }
