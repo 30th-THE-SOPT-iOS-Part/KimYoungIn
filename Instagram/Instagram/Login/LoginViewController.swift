@@ -11,13 +11,11 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordShownBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButton()
-        setTextField()
+        setUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,11 +35,10 @@ class LoginViewController: UIViewController {
         guard let signupNameVC = signupNameSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupNameVC) as? SignupNameViewController else { return }
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
-    
-    // 눈 모양 아이콘 클릭 이벤트
-    @IBAction func passwordShownBtnDidTap(_ sender: UIButton) {
-        sender.isSelected.toggle()
-        passwordTextField.isSecureTextEntry = !sender.isSelected
+
+    private func setUI() {
+        setButton()
+        setTextField()
     }
     
     private func removeTextField() {
@@ -51,7 +48,35 @@ class LoginViewController: UIViewController {
     }
     
     private func setButton() {
+        setLoginBtn()
+        setPasswordShownBtn()
+    }
+    
+    private func setLoginBtn() {
         loginBtn.layer.cornerRadius = 5
+    }
+    
+    private func setPasswordShownBtn() {
+        let passwordShownBtn = UIButton(type: .custom)
+        passwordShownBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        passwordShownBtn.tintColor = .lightGray
+        passwordShownBtn.setImage(UIImage(named: "pw_hidden"), for: .normal)
+        passwordShownBtn.setImage(UIImage(named: "pw_shown"), for: .selected)
+        passwordShownBtn.addTarget(self, action: #selector(passwordShownBtnDidTap(_:)), for: .touchUpInside)
+        let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
+        rightView.addSubview(passwordShownBtn)
+        passwordTextField.rightView = rightView
+        passwordTextField.rightViewMode = .always
+    }
+    
+    @objc func passwordShownBtnDidTap(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        passwordTextField.isSecureTextEntry = !sender.isSelected
+        if sender.isSelected {
+            sender.tintColor = .systemBlue
+        } else {
+            sender.tintColor = .lightGray
+        }
     }
     
     private func setTextField() {
