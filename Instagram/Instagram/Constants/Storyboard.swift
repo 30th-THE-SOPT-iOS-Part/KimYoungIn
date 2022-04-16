@@ -7,8 +7,9 @@
 
 import Foundation
 
+// MARK: - Storyboard
+
 extension Const {
-    // Storyboard 의 name 을 상수로 관리합니다.
     struct Storyboard {
         struct Name {
             static let main = "Main"

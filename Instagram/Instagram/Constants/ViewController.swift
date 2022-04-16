@@ -8,7 +8,6 @@
 import Foundation
 
 extension Const {
-    // ViewController 의 identifier 을 상수로 관리합니다.
     struct ViewController {
         struct Identifier {
             static let loginVC = "LoginViewController"

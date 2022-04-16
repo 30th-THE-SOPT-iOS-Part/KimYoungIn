@@ -60,8 +60,8 @@ class LoginViewController: UIViewController {
         let passwordShownBtn = UIButton(type: .custom)
         passwordShownBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         passwordShownBtn.tintColor = .lightGray
-        passwordShownBtn.setImage(UIImage(named: "pw_hidden"), for: .normal)
-        passwordShownBtn.setImage(UIImage(named: "pw_shown"), for: .selected)
+        passwordShownBtn.setImage(Const.Icon.pwHidden, for: .normal)
+        passwordShownBtn.setImage(Const.Icon.pwShown, for: .selected)
         passwordShownBtn.addTarget(self, action: #selector(passwordShownBtnDidTap(_:)), for: .touchUpInside)
         let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
         rightView.addSubview(passwordShownBtn)

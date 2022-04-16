@@ -32,30 +32,36 @@ class TabBarController: UITabBarController {
         
         homeVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_home"),
-            selectedImage: UIImage(named: "icn_home_selected")
+            image: Const.Icon.home,
+            selectedImage: Const.Icon.homeSelected
         )
         searchVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_search"),
-            selectedImage: UIImage(named: "icn_search_selected")
+            image: Const.Icon.search,
+            selectedImage: Const.Icon.searchSelected
         )
         reelsVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_reels"),
-            selectedImage: UIImage(named: "icn_reels_selected")
+            image: Const.Icon.reels,
+            selectedImage: Const.Icon.reelSelected
         )
         shopVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_shop"),
-            selectedImage: UIImage(named: "icn_shop_selected")
+            image: Const.Icon.shop,
+            selectedImage: Const.Icon.shopSelected
         )
         profileVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_profile"),
-            selectedImage: UIImage(named: "icn_profile_selected")
+            image: Const.Icon.profile,
+            selectedImage: Const.Icon.profileSelected
         )
         
         setViewControllers([homeVC, searchVC, reelsVC, shopVC, profileVC], animated: true)
+    }
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("\(item)")
     }
 }

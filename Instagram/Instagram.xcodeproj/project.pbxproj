@@ -27,6 +27,7 @@
 		A90900C4280AC6D700089CCA /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C3280AC6D700089CCA /* ShopViewController.swift */; };
 		A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C5280AC6DD00089CCA /* ProfileViewController.swift */; };
 		A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C7280ACD8B00089CCA /* TabBarController.swift */; };
+		A90900CA280AEF8600089CCA /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C9280AEF8600089CCA /* Icon.swift */; };
 		A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743A27FFE175001B0EDB /* AppDelegate.swift */; };
 		A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743C27FFE175001B0EDB /* SceneDelegate.swift */; };
 		A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743E27FFE175001B0EDB /* LoginViewController.swift */; };
@@ -58,6 +59,7 @@
 		A90900C3280AC6D700089CCA /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		A90900C5280AC6DD00089CCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A90900C7280ACD8B00089CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A90900C9280AEF8600089CCA /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		A932743727FFE175001B0EDB /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932743A27FFE175001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932743C27FFE175001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,22 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		A90900CB280AF17400089CCA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A90900AB280AC5A700089CCA /* TabBar */,
+				A932745A2800042E001B0EDB /* Login */,
+				A932745B2800043D001B0EDB /* Signup */,
+				A932745D28011BB3001B0EDB /* Success */,
+				A90900AE280AC5F500089CCA /* Home */,
+				A90900B0280AC60400089CCA /* Search */,
+				A90900AF280AC5F700089CCA /* Reels */,
+				A90900B1280AC60A00089CCA /* Shop */,
+				A90900B2280AC61200089CCA /* Profile */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		A932742E27FFE175001B0EDB = {
 			isa = PBXGroup;
 			children = (
@@ -158,15 +176,7 @@
 				A932743C27FFE175001B0EDB /* SceneDelegate.swift */,
 				A90900752805667A00089CCA /* Main.storyboard */,
 				A93274AA28056384001B0EDB /* Constants */,
-				A90900AB280AC5A700089CCA /* TabBar */,
-				A932745A2800042E001B0EDB /* Login */,
-				A932745B2800043D001B0EDB /* Signup */,
-				A932745D28011BB3001B0EDB /* Success */,
-				A90900AE280AC5F500089CCA /* Home */,
-				A90900B0280AC60400089CCA /* Search */,
-				A90900AF280AC5F700089CCA /* Reels */,
-				A90900B1280AC60A00089CCA /* Shop */,
-				A90900B2280AC61200089CCA /* Profile */,
+				A90900CB280AF17400089CCA /* Source */,
 				A932744327FFE176001B0EDB /* Assets.xcassets */,
 				A932744527FFE176001B0EDB /* LaunchScreen.storyboard */,
 				A932744827FFE176001B0EDB /* Info.plist */,
@@ -209,6 +219,7 @@
 				A90900712805643E00089CCA /* Const.swift */,
 				A909007D280595C200089CCA /* Storyboard.swift */,
 				A909007F280595CA00089CCA /* ViewController.swift */,
+				A90900C9280AEF8600089CCA /* Icon.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -308,6 +319,7 @@
 				A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */,
 				A932745527FFFB0C001B0EDB /* SignupNameViewController.swift in Sources */,
 				A90900C2280AC6D200089CCA /* ReelsViewController.swift in Sources */,
+				A90900CA280AEF8600089CCA /* Icon.swift in Sources */,
 				A90900722805643E00089CCA /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
