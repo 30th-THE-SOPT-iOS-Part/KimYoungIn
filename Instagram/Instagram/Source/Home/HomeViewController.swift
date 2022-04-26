@@ -60,26 +60,29 @@ class HomeViewController: UIViewController {
         
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        
+        homeTableView.rowHeight = UITableView.automaticDimension
+        homeTableView.estimatedRowHeight = 500
     }
     
 }
 
 extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let width = UIScreen.main.bounds.width
-        var cellHeight: CGFloat
-        
-        switch indexPath.section {
-        case 0:
-            cellHeight = width * (82/375)
-        case 1:
-            cellHeight = width * (488/375)
-        default:
-            cellHeight = 0
-        }
-        
-        return cellHeight
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let width = UIScreen.main.bounds.width
+//        var cellHeight: CGFloat
+//        
+//        switch indexPath.section {
+//        case 0:
+//            cellHeight = width * (82/375)
+//        case 1:
+//            cellHeight = width * (488/375)
+//        default:
+//            cellHeight = 0
+//        }
+//        
+//        return cellHeight
+//    }
 }
 
 extension HomeViewController: UITableViewDataSource {

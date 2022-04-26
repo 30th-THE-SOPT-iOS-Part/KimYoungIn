@@ -35,8 +35,8 @@
                 <constraint firstItem="QlV-yu-nas" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="B90-DY-5In"/>
                 <constraint firstItem="6Lg-pS-yEG" firstAttribute="top" secondItem="QlV-yu-nas" secondAttribute="bottom" constant="2" id="Gb3-tE-QW4"/>
                 <constraint firstItem="QlV-yu-nas" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="RUv-1d-UqS"/>
-                <constraint firstItem="QlV-yu-nas" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Sgb-di-TBo"/>
                 <constraint firstItem="6Lg-pS-yEG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fZg-9T-cdu"/>
+                <constraint firstAttribute="bottom" secondItem="6Lg-pS-yEG" secondAttribute="bottom" constant="4" id="pBi-eP-Nkj"/>
                 <constraint firstAttribute="trailing" secondItem="QlV-yu-nas" secondAttribute="trailing" constant="5" id="yyL-ts-qYV"/>
             </constraints>
             <connections>
