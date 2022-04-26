@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TableViewCellDelegate {
+    func likeBtnDidTapEvent(_ msg: String)
+}
+
 class FeedTableViewCell: UITableViewCell {
     
     static let identifier = "FeedTableViewCell"
@@ -20,8 +24,21 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var commentBtn: UIButton!
     
+    var delegate: TableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setBtn()
+    }
+    
+    private func setBtn() {
+        likeBtn.setImage(Const.Icon.unlike, for: .normal)
+        likeBtn.setImage(Const.Icon.like, for: .selected)
+    }
+    
+    @IBAction func likeBtnDidTap(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        delegate?.likeBtnDidTapEvent(likeLabel.text ?? "")
     }
     
     func setData(_ feedData: FeedDataModel) {

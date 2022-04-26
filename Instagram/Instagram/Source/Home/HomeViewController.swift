@@ -110,9 +110,18 @@ extension HomeViewController: UITableViewDataSource {
         case 1:
             guard let cell = homeTableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
             cell.setData(FeedDataModel.sampleData[indexPath.row])
+            
+            cell.delegate = self
+            
             return cell
         default:
             return UITableViewCell()
         }
+    }
+}
+
+extension HomeViewController: TableViewCellDelegate {
+    func likeBtnDidTapEvent(_ msg: String) {
+        print(msg)
     }
 }
