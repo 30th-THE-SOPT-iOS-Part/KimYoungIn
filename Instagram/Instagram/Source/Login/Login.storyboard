@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-ZE-kRb">
-                                <rect key="frame" x="100" y="210" width="175" height="50"/>
+                                <rect key="frame" x="100" y="178" width="175" height="50"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T39-lb-6pz" userLabel="아이디/비밀번호">
-                                <rect key="frame" x="16" y="300" width="343" height="145"/>
+                                <rect key="frame" x="16" y="268" width="343" height="145"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  전화번호, 사용자 이름 또는 이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86A-lq-fuT">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -54,7 +54,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thh-90-kb7">
-                                <rect key="frame" x="16" y="477" width="343" height="44"/>
+                                <rect key="frame" x="16" y="445" width="343" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yDY-ox-YMf"/>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-fr-fVI" userLabel="가입하기">
-                                <rect key="frame" x="102.00000000000001" y="557" width="171.33333333333337" height="30"/>
+                                <rect key="frame" x="102.00000000000001" y="525" width="171.33333333333337" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없으신가요? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-AJ-qU3">
                                         <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="30"/>
@@ -91,9 +91,9 @@
                         <constraints>
                             <constraint firstItem="VX3-CZ-d5v" firstAttribute="trailing" secondItem="Thh-90-kb7" secondAttribute="trailing" constant="16" id="1bo-9s-GAl"/>
                             <constraint firstItem="UdD-fr-fVI" firstAttribute="top" secondItem="Thh-90-kb7" secondAttribute="bottom" constant="36" id="3Jz-Ow-KBg"/>
-                            <constraint firstItem="Xak-ZE-kRb" firstAttribute="top" secondItem="VX3-CZ-d5v" secondAttribute="top" constant="166" id="5FC-TU-SeL"/>
                             <constraint firstItem="Xak-ZE-kRb" firstAttribute="centerX" secondItem="yfN-zZ-rRX" secondAttribute="centerX" id="AIt-BJ-8ua"/>
                             <constraint firstItem="T39-lb-6pz" firstAttribute="leading" secondItem="yfN-zZ-rRX" secondAttribute="leading" constant="16" id="HQj-mL-q6a"/>
+                            <constraint firstItem="Xak-ZE-kRb" firstAttribute="centerY" secondItem="yfN-zZ-rRX" secondAttribute="centerY" multiplier="0.5" id="T06-5j-MPg"/>
                             <constraint firstItem="Thh-90-kb7" firstAttribute="top" secondItem="T39-lb-6pz" secondAttribute="bottom" constant="32" id="UEr-wh-DE0"/>
                             <constraint firstItem="UdD-fr-fVI" firstAttribute="centerX" secondItem="yfN-zZ-rRX" secondAttribute="centerX" id="gk5-5P-HGs"/>
                             <constraint firstItem="Thh-90-kb7" firstAttribute="leading" secondItem="VX3-CZ-d5v" secondAttribute="leading" constant="16" id="lHS-qi-yWi"/>

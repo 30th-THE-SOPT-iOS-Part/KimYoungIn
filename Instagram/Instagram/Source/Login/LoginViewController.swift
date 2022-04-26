@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        removeTextField()
+        resetTextField()
     }
     
     @IBAction func loginBtnDidTap(_ sender: Any) {
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         setTextField()
     }
     
-    private func removeTextField() {
+    private func resetTextField() {
         [nameTextField, passwordTextField].forEach {
             $0?.text?.removeAll()
         }
@@ -72,11 +72,7 @@ class LoginViewController: UIViewController {
     @objc func passwordShownBtnDidTap(_ sender: UIButton) {
         sender.isSelected.toggle()
         passwordTextField.isSecureTextEntry = !sender.isSelected
-        if sender.isSelected {
-            sender.tintColor = .systemBlue
-        } else {
-            sender.tintColor = .lightGray
-        }
+        sender.tintColor = sender.isSelected ? .systemBlue : .lightGray
     }
     
     private func setTextField() {
