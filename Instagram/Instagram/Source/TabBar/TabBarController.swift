@@ -30,6 +30,7 @@ class TabBarController: UITabBarController {
               let profileVC = profileSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.profileVC) as? ProfileViewController
         else { return }
         
+        let homeNVC = UINavigationController(rootViewController: homeVC)
         
         homeVC.tabBarItem = UITabBarItem(
             title: "",
@@ -57,7 +58,7 @@ class TabBarController: UITabBarController {
             selectedImage: Const.Icon.profileSelected
         )
         
-        setViewControllers([homeVC, searchVC, reelsVC, shopVC, profileVC], animated: false)
+        setViewControllers([homeNVC, searchVC, reelsVC, shopVC, profileVC], animated: false)
     }
     
     private func setTabBarColor(_ isReels: Bool) {
