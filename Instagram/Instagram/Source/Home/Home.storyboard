@@ -15,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tvq-ps-buv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tvq-ps-buv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7oy-C2-Zip"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tvq-ps-buv" secondAttribute="trailing" id="PXC-hg-n6c"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tvq-ps-buv" secondAttribute="bottom" id="jjR-ey-8oG"/>
+                            <constraint firstItem="tvq-ps-buv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="yw3-zU-muO"/>
+                        </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="homeTableView" destination="tvq-ps-buv" id="mQJ-Y0-M6E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

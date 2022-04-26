@@ -38,6 +38,12 @@
 		A932745727FFFB1D001B0EDB /* SignupPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */; };
 		A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932745827FFFB27001B0EDB /* SuccessViewController.swift */; };
 		A97D303D2817882800C1D7D0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D303C2817882800C1D7D0 /* Image.swift */; };
+		A97D304D2817EAA900C1D7D0 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D304C2817EAA900C1D7D0 /* StoryDataModel.swift */; };
+		A97D30502817EAC000C1D7D0 /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D304F2817EAC000C1D7D0 /* FeedDataModel.swift */; };
+		A97D30542817EEBA00C1D7D0 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D30522817EEBA00C1D7D0 /* FeedTableViewCell.swift */; };
+		A97D30552817EEBA00C1D7D0 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97D30532817EEBA00C1D7D0 /* FeedTableViewCell.xib */; };
+		A97D30582817EED200C1D7D0 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D30562817EED100C1D7D0 /* StoryCollectionViewCell.swift */; };
+		A97D30592817EED200C1D7D0 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97D30572817EED100C1D7D0 /* StoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +80,12 @@
 		A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordViewController.swift; sourceTree = "<group>"; };
 		A932745827FFFB27001B0EDB /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		A97D303C2817882800C1D7D0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		A97D304C2817EAA900C1D7D0 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
+		A97D304F2817EAC000C1D7D0 /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
+		A97D30522817EEBA00C1D7D0 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		A97D30532817EEBA00C1D7D0 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		A97D30562817EED100C1D7D0 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A97D30572817EED100C1D7D0 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,10 @@
 		A90900AE280AC5F500089CCA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A97D304E2817EAB000C1D7D0 /* HomeDataModels */,
 				A90900B3280AC64600089CCA /* Home.storyboard */,
 				A90900BD280AC6C500089CCA /* HomeViewController.swift */,
+				A97D30512817EE9D00C1D7D0 /* HomeCells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +252,42 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		A97D304E2817EAB000C1D7D0 /* HomeDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				A97D304C2817EAA900C1D7D0 /* StoryDataModel.swift */,
+				A97D304F2817EAC000C1D7D0 /* FeedDataModel.swift */,
+			);
+			path = HomeDataModels;
+			sourceTree = "<group>";
+		};
+		A97D30512817EE9D00C1D7D0 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				A97D305A2817EF8400C1D7D0 /* StoryCell */,
+				A97D305B2817EF8A00C1D7D0 /* FeedCell */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
+		A97D305A2817EF8400C1D7D0 /* StoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				A97D30572817EED100C1D7D0 /* StoryCollectionViewCell.xib */,
+				A97D30562817EED100C1D7D0 /* StoryCollectionViewCell.swift */,
+			);
+			path = StoryCell;
+			sourceTree = "<group>";
+		};
+		A97D305B2817EF8A00C1D7D0 /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				A97D30532817EEBA00C1D7D0 /* FeedTableViewCell.xib */,
+				A97D30522817EEBA00C1D7D0 /* FeedTableViewCell.swift */,
+			);
+			path = FeedCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90900BA280AC6A700089CCA /* Shop.storyboard in Resources */,
+				A97D30592817EED200C1D7D0 /* StoryCollectionViewCell.xib in Resources */,
 				A9090074280564FD00089CCA /* Login.storyboard in Resources */,
 				A932744727FFE176001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A909007A2805669300089CCA /* Success.storyboard in Resources */,
@@ -309,6 +360,7 @@
 				A909007C280566C900089CCA /* SignupPassword.storyboard in Resources */,
 				A90900782805668600089CCA /* SignupName.storyboard in Resources */,
 				A90900762805667A00089CCA /* Main.storyboard in Resources */,
+				A97D30552817EEBA00C1D7D0 /* FeedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +373,7 @@
 			files = (
 				A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */,
 				A97D303D2817882800C1D7D0 /* Image.swift in Sources */,
+				A97D30582817EED200C1D7D0 /* StoryCollectionViewCell.swift in Sources */,
 				A90900CE280AFB2B00089CCA /* ViewController++.swift in Sources */,
 				A90900C0280AC6CC00089CCA /* SearchViewController.swift in Sources */,
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,
@@ -328,15 +381,18 @@
 				A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */,
 				A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */,
 				A90900C4280AC6D700089CCA /* ShopViewController.swift in Sources */,
+				A97D30502817EAC000C1D7D0 /* FeedDataModel.swift in Sources */,
 				A9090080280595CA00089CCA /* ViewController.swift in Sources */,
 				A932745727FFFB1D001B0EDB /* SignupPasswordViewController.swift in Sources */,
 				A90900BE280AC6C500089CCA /* HomeViewController.swift in Sources */,
 				A909007E280595C200089CCA /* Storyboard.swift in Sources */,
 				A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */,
 				A932745527FFFB0C001B0EDB /* SignupNameViewController.swift in Sources */,
+				A97D30542817EEBA00C1D7D0 /* FeedTableViewCell.swift in Sources */,
 				A90900C2280AC6D200089CCA /* ReelsViewController.swift in Sources */,
 				A90900CA280AEF8600089CCA /* Icon.swift in Sources */,
 				A90900722805643E00089CCA /* Const.swift in Sources */,
+				A97D304D2817EAA900C1D7D0 /* StoryDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
