@@ -37,6 +37,7 @@
 		A932745527FFFB0C001B0EDB /* SignupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932745427FFFB0C001B0EDB /* SignupNameViewController.swift */; };
 		A932745727FFFB1D001B0EDB /* SignupPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */; };
 		A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932745827FFFB27001B0EDB /* SuccessViewController.swift */; };
+		A97D303D2817882800C1D7D0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D303C2817882800C1D7D0 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		A932745427FFFB0C001B0EDB /* SignupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameViewController.swift; sourceTree = "<group>"; };
 		A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordViewController.swift; sourceTree = "<group>"; };
 		A932745827FFFB27001B0EDB /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		A97D303C2817882800C1D7D0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				A909007D280595C200089CCA /* Storyboard.swift */,
 				A909007F280595CA00089CCA /* ViewController.swift */,
 				A90900C9280AEF8600089CCA /* Icon.swift */,
+				A97D303C2817882800C1D7D0 /* Image.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */,
+				A97D303D2817882800C1D7D0 /* Image.swift in Sources */,
 				A90900CE280AFB2B00089CCA /* ViewController++.swift in Sources */,
 				A90900C0280AC6CC00089CCA /* SearchViewController.swift in Sources */,
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,

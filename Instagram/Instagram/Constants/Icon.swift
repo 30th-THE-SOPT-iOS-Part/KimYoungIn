@@ -11,7 +11,6 @@ import UIKit
 
 extension Const{
     public enum Icon {
-        public static let instagram = UIImage(named: "instagram")
         public static let back = UIImage(named: "back")
         public static let pwHidden = UIImage(named: "pw_hidden")
         public static let pwShown = UIImage(named: "pw_shown")
@@ -25,5 +24,13 @@ extension Const{
         public static let shopSelected = UIImage(named: "icn_shop_selected")
         public static let profile = UIImage(named: "icn_profile")
         public static let profileSelected = UIImage(named: "icn_profile_selected")
+        
+        public static let icnAdd = UIImage(named: "icn_add")
+        public static let icnBookmark = UIImage(named: "icn_bookmark")
+        public static let icnComment = UIImage(named: "icn_comment")
+        public static let icnLike = UIImage(named: "icn_like")
+        public static let icnMore = UIImage(named: "icn_more")
+        public static let icnShare = UIImage(named: "icn_share")
+        public static let icnUnlike = UIImage(named: "icn_unlike")
     }
 }
