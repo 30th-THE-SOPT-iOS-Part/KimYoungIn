@@ -25,12 +25,12 @@ extension Const{
         public static let profile = UIImage(named: "icn_profile")
         public static let profileSelected = UIImage(named: "icn_profile_selected")
         
-        public static let icnAdd = UIImage(named: "icn_add")
-        public static let icnBookmark = UIImage(named: "icn_bookmark")
-        public static let icnComment = UIImage(named: "icn_comment")
-        public static let icnLike = UIImage(named: "icn_like")
-        public static let icnMore = UIImage(named: "icn_more")
-        public static let icnShare = UIImage(named: "icn_share")
-        public static let icnUnlike = UIImage(named: "icn_unlike")
+        public static let add = UIImage(named: "icn_add")
+        public static let bookmark = UIImage(named: "icn_bookmark")
+        public static let comment = UIImage(named: "icn_comment")
+        public static let like = UIImage(named: "icn_like")
+        public static let more = UIImage(named: "icn_more")
+        public static let share = UIImage(named: "icn_share")
+        public static let unlike = UIImage(named: "icn_unlike")
     }
 }
