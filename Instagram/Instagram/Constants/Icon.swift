@@ -1,0 +1,29 @@
+//
+//  Icon.swift
+//  Instagram
+//
+//  Created by 김영인 on 2022/04/16.
+//
+
+import UIKit
+
+// MARK: - Icon
+
+extension Const{
+    public enum Icon {
+        public static let instagram = UIImage(named: "instagram")
+        public static let back = UIImage(named: "back")
+        public static let pwHidden = UIImage(named: "pw_hidden")
+        public static let pwShown = UIImage(named: "pw_shown")
+        public static let home = UIImage(named: "icn_home")
+        public static let homeSelected = UIImage(named: "icn_home_selected")
+        public static let search = UIImage(named: "icn_search")
+        public static let searchSelected = UIImage(named: "icn_search_selected")
+        public static let reels = UIImage(named: "icn_reels")
+        public static let reelSelected = UIImage(named: "icn_reels_selected")
+        public static let shop = UIImage(named: "icn_shop")
+        public static let shopSelected = UIImage(named: "icn_shop_selected")
+        public static let profile = UIImage(named: "icn_profile")
+        public static let profileSelected = UIImage(named: "icn_profile_selected")
+    }
+}

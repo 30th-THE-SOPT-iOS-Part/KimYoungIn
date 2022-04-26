@@ -19,6 +19,12 @@ class SuccessViewController: UIViewController {
     }
     
     @IBAction func successBtnDidTap(_ sender: Any) {
+        let tabBarSB = UIStoryboard(name: Const.Storyboard.Name.tabBar, bundle: nil)
+        guard let tabBarController = tabBarSB.instantiateViewController(withIdentifier: Const.TabBarController.Identifier.tabBarController) as? TabBarController else { return }
+        changeRootViewController(tabBarController)  // tabBarController를 최상위 뷰컨으로 바꾸기
+    }
+    
+    @IBAction func otherAccountBtnDidTap(_ sender: Any) {
         dismiss(animated: true)
     }
     
