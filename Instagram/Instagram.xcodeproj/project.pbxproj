@@ -44,6 +44,8 @@
 		A97D30552817EEBA00C1D7D0 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97D30532817EEBA00C1D7D0 /* FeedTableViewCell.xib */; };
 		A97D30582817EED200C1D7D0 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D30562817EED100C1D7D0 /* StoryCollectionViewCell.swift */; };
 		A97D30592817EED200C1D7D0 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97D30572817EED100C1D7D0 /* StoryCollectionViewCell.xib */; };
+		A97D306428180A3700C1D7D0 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D306228180A3700C1D7D0 /* StoryTableViewCell.swift */; };
+		A97D306528180A3700C1D7D0 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97D306328180A3700C1D7D0 /* StoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		A97D30532817EEBA00C1D7D0 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		A97D30562817EED100C1D7D0 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A97D30572817EED100C1D7D0 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		A97D306228180A3700C1D7D0 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		A97D306328180A3700C1D7D0 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +268,8 @@
 		A97D30512817EE9D00C1D7D0 /* HomeCells */ = {
 			isa = PBXGroup;
 			children = (
+				A97D306328180A3700C1D7D0 /* StoryTableViewCell.xib */,
+				A97D306228180A3700C1D7D0 /* StoryTableViewCell.swift */,
 				A97D305A2817EF8400C1D7D0 /* StoryCell */,
 				A97D305B2817EF8A00C1D7D0 /* FeedCell */,
 			);
@@ -348,6 +354,7 @@
 			files = (
 				A90900BA280AC6A700089CCA /* Shop.storyboard in Resources */,
 				A97D30592817EED200C1D7D0 /* StoryCollectionViewCell.xib in Resources */,
+				A97D306528180A3700C1D7D0 /* StoryTableViewCell.xib in Resources */,
 				A9090074280564FD00089CCA /* Login.storyboard in Resources */,
 				A932744727FFE176001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A909007A2805669300089CCA /* Success.storyboard in Resources */,
@@ -388,6 +395,7 @@
 				A909007E280595C200089CCA /* Storyboard.swift in Sources */,
 				A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */,
 				A932745527FFFB0C001B0EDB /* SignupNameViewController.swift in Sources */,
+				A97D306428180A3700C1D7D0 /* StoryTableViewCell.swift in Sources */,
 				A97D30542817EEBA00C1D7D0 /* FeedTableViewCell.swift in Sources */,
 				A90900C2280AC6D200089CCA /* ReelsViewController.swift in Sources */,
 				A90900CA280AEF8600089CCA /* Icon.swift in Sources */,

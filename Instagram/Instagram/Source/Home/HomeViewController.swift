@@ -51,6 +51,10 @@ class HomeViewController: UIViewController {
     
     private func setTableView() {
         homeTableView.separatorStyle = .none
+        
+        let storyNib = UINib(nibName: StoryTableViewCell.identifier, bundle: nil)
+        homeTableView.register(storyNib, forCellReuseIdentifier: StoryTableViewCell.identifier)
+        
         let nib = UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
         homeTableView.register(nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
         
@@ -63,24 +67,52 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let width = UIScreen.main.bounds.width
+        var cellHeight: CGFloat
         
-        let cellWidth = width * (176/375)
-        let cellHeight = cellWidth * (488/176)
+        switch indexPath.section {
+        case 0:
+            cellHeight = width * (82/375)
+        case 1:
+            cellHeight = width * (488/375)
+        default:
+            cellHeight = 0
+        }
         
         return cellHeight
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FeedDataModel.sampleData.count
+        var count: Int
+        
+        switch section {
+        case 0:
+            count = 1
+        case 1:
+            count = FeedDataModel.sampleData.count
+        default:
+            count = 0
+        }
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = homeTableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
-        
-        cell.setData(FeedDataModel.sampleData[indexPath.row])
-        
-        return cell
+        switch indexPath.section {
+        case 0:
+            guard let cell = homeTableView.dequeueReusableCell(withIdentifier: StoryTableViewCell.identifier, for: indexPath) as? StoryTableViewCell else { return UITableViewCell() }
+            return cell
+        case 1:
+            guard let cell = homeTableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
+            cell.setData(FeedDataModel.sampleData[indexPath.row])
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
