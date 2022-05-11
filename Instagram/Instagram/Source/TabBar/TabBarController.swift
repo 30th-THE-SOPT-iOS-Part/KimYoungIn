@@ -11,7 +11,14 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         setTabBarController()
+    }
+    
+    private func setUI() {
+        tabBar.barTintColor = .white
+        tabBar.tintColor = .black
+        tabBar.unselectedItemTintColor = .black
     }
     
     private func setTabBarController() {
@@ -30,6 +37,7 @@ class TabBarController: UITabBarController {
               let profileVC = profileSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.profileVC) as? ProfileViewController
         else { return }
         
+        let homeNVC = UINavigationController(rootViewController: homeVC)
         
         homeVC.tabBarItem = UITabBarItem(
             title: "",
@@ -57,18 +65,18 @@ class TabBarController: UITabBarController {
             selectedImage: Const.Icon.profileSelected
         )
         
-        setViewControllers([homeVC, searchVC, reelsVC, shopVC, profileVC], animated: false)
+        setViewControllers([homeNVC, searchVC, reelsVC, shopVC, profileVC], animated: false)
     }
     
     private func setTabBarColor(_ isReels: Bool) {
         if isReels {
-            tabBar.backgroundColor = .black
-            tabBar.tintColor = .white
-            tabBar.barTintColor = .white
-        } else {
-            tabBar.backgroundColor = .white
-            tabBar.tintColor = .black
             tabBar.barTintColor = .black
+            tabBar.tintColor = .white
+            tabBar.unselectedItemTintColor = .white
+        } else {
+            tabBar.barTintColor = .white
+            tabBar.tintColor = .black
+            tabBar.unselectedItemTintColor = .black
         }
     }
     
