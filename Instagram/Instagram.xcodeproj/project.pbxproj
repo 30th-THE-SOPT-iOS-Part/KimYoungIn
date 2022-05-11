@@ -29,6 +29,11 @@
 		A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C7280ACD8B00089CCA /* TabBarController.swift */; };
 		A90900CA280AEF8600089CCA /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900C9280AEF8600089CCA /* Icon.swift */; };
 		A90900CE280AFB2B00089CCA /* ViewController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900CD280AFB2B00089CCA /* ViewController++.swift */; };
+		A923CC09282BA0D600608B3F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC08282BA0D600608B3F /* UserService.swift */; };
+		A923CC0B282BA0F200608B3F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC0A282BA0F200608B3F /* NetworkResult.swift */; };
+		A923CC0D282BA10C00608B3F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC0C282BA10C00608B3F /* APIConstants.swift */; };
+		A923CC0F282BA12500608B3F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC0E282BA12500608B3F /* LoginModel.swift */; };
+		A923CC11282BA13F00608B3F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC10282BA13F00608B3F /* SignupModel.swift */; };
 		A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743A27FFE175001B0EDB /* AppDelegate.swift */; };
 		A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743C27FFE175001B0EDB /* SceneDelegate.swift */; };
 		A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743E27FFE175001B0EDB /* LoginViewController.swift */; };
@@ -74,6 +79,11 @@
 		A90900C7280ACD8B00089CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A90900C9280AEF8600089CCA /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		A90900CD280AFB2B00089CCA /* ViewController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController++.swift"; sourceTree = "<group>"; };
+		A923CC08282BA0D600608B3F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		A923CC0A282BA0F200608B3F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		A923CC0C282BA10C00608B3F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		A923CC0E282BA12500608B3F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		A923CC10282BA13F00608B3F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		A932743727FFE175001B0EDB /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932743A27FFE175001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932743C27FFE175001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +215,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A923CC04282B9DCB00608B3F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A923CC0C282BA10C00608B3F /* APIConstants.swift */,
+				A923CC0A282BA0F200608B3F /* NetworkResult.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A923CC06282B9EB400608B3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A923CC0E282BA12500608B3F /* LoginModel.swift */,
+				A923CC10282BA13F00608B3F /* SignupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A923CC07282B9EB900608B3F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A923CC08282BA0D600608B3F /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		A932742E27FFE175001B0EDB = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +267,9 @@
 				A90900752805667A00089CCA /* Main.storyboard */,
 				A93274AA28056384001B0EDB /* Constants */,
 				A90900CC280AFB1900089CCA /* Extensions */,
+				A923CC06282B9EB400608B3F /* Model */,
+				A923CC04282B9DCB00608B3F /* Network */,
+				A923CC07282B9EB900608B3F /* Service */,
 				A90900CB280AF17400089CCA /* Source */,
 				A932744327FFE176001B0EDB /* Assets.xcassets */,
 				A932744527FFE176001B0EDB /* LaunchScreen.storyboard */,
@@ -448,6 +487,7 @@
 			files = (
 				A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */,
 				A97D303D2817882800C1D7D0 /* Image.swift in Sources */,
+				A923CC0D282BA10C00608B3F /* APIConstants.swift in Sources */,
 				A97D30582817EED200C1D7D0 /* StoryCollectionViewCell.swift in Sources */,
 				A90900CE280AFB2B00089CCA /* ViewController++.swift in Sources */,
 				A90900C0280AC6CC00089CCA /* SearchViewController.swift in Sources */,
@@ -464,8 +504,12 @@
 				A932745927FFFB27001B0EDB /* SuccessViewController.swift in Sources */,
 				A932745527FFFB0C001B0EDB /* SignupNameViewController.swift in Sources */,
 				A97D306428180A3700C1D7D0 /* StoryTableViewCell.swift in Sources */,
+				A923CC11282BA13F00608B3F /* SignupModel.swift in Sources */,
 				A97D30542817EEBA00C1D7D0 /* FeedTableViewCell.swift in Sources */,
 				A90900C2280AC6D200089CCA /* ReelsViewController.swift in Sources */,
+				A923CC09282BA0D600608B3F /* UserService.swift in Sources */,
+				A923CC0F282BA12500608B3F /* LoginModel.swift in Sources */,
+				A923CC0B282BA0F200608B3F /* NetworkResult.swift in Sources */,
 				A90900CA280AEF8600089CCA /* Icon.swift in Sources */,
 				A90900722805643E00089CCA /* Const.swift in Sources */,
 				A97D304D2817EAA900C1D7D0 /* StoryDataModel.swift in Sources */,
