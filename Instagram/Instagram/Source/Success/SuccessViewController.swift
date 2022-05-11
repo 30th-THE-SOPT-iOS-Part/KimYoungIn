@@ -21,9 +21,9 @@ class SuccessViewController: UIViewController {
     
     @IBAction func successBtnDidTap(_ sender: Any) {
         signup()
-        let tabBarSB = UIStoryboard(name: Const.Storyboard.Name.tabBar, bundle: nil)
-        guard let tabBarController = tabBarSB.instantiateViewController(withIdentifier: Const.TabBarController.Identifier.tabBarController) as? TabBarController else { return }
-        changeRootViewController(tabBarController)  // tabBarController를 최상위 뷰컨으로 바꾸기
+//        let tabBarSB = UIStoryboard(name: Const.Storyboard.Name.tabBar, bundle: nil)
+//        guard let tabBarController = tabBarSB.instantiateViewController(withIdentifier: Const.TabBarController.Identifier.tabBarController) as? TabBarController else { return }
+//        changeRootViewController(tabBarController)  
     }
     
     @IBAction func otherAccountBtnDidTap(_ sender: Any) {
@@ -50,8 +50,10 @@ extension SuccessViewController {
                 switch response {
                 case .success(let data):
                     guard let data = data as? SignupResponse else { return }
+                    self.alertPresent(message: "회원가입 성공", sb: Const.Storyboard.Name.login, vc: Const.ViewController.Identifier.loginVC)
                     print("🔥 \(data)")
                 default:
+                    self.alert(message: "회원가입 실패")
                     print("❌ \(response)")
                     return
                 }

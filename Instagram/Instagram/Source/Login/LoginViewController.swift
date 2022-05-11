@@ -24,11 +24,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginBtnDidTap(_ sender: Any) {
         login()
-        let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
-        guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
-        successVC.name = nameTextField.text
-        successVC.modalPresentationStyle = .fullScreen
-        self.present(successVC, animated: true)
+//        let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
+//        guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
+//        successVC.name = nameTextField.text
+//        successVC.modalPresentationStyle = .fullScreen
+//        self.present(successVC, animated: true)
     }
     
     @IBAction func signupBtnDidTap(_ sender: Any) {
@@ -106,12 +106,13 @@ extension LoginViewController {
                 switch response {
                 case .success(let data):
                     guard let data = data as? LoginResponse else { return }
+                    self.alertPresent(message: "로그인 성공", sb: Const.Storyboard.Name.tabBar, vc: Const.TabBarController.Identifier.tabBarController)
                     print("🔥 \(data)")
                 default:
+                    self.alert(message: "로그인 실패")
                     print("❌ \(response)")
                     return
                 }
             }
     }
 }
-
