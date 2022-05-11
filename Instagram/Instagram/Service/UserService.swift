@@ -13,15 +13,13 @@ class UserService {
     
     private init() {}
     
-    func login(name: String,
-               email: String,
+    func login(email: String,
                password: String,
                completion: @escaping (NetworkResult<Any>) -> Void)
     {
         let url = APIConstants.loginURl
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         let body: Parameters = [
-            "name": name,
             "email": email,
             "password": password
         ]
@@ -47,8 +45,8 @@ class UserService {
     
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
-        case 200: return isValidData(data: data)
-        case 400: return .pathErr
+        case 200 ..< 300: return isValidData(data: data)
+        case 400 ..< 500: return .pathErr
         case 500: return .serverErr
         default: return .networkFail
         }

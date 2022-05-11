@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnDidTap(_ sender: Any) {
+        login()
         let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
         guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
         successVC.name = nameTextField.text
@@ -35,7 +36,7 @@ class LoginViewController: UIViewController {
         guard let signupNameVC = signupNameSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupNameVC) as? SignupNameViewController else { return }
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
-
+    
     private func setUI() {
         setButton()
         setTextField()
@@ -92,5 +93,25 @@ class LoginViewController: UIViewController {
         }
     }
     
+}
+
+extension LoginViewController {
+    func login() {
+        guard let email = nameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        UserService.shared.login(
+            email: email,
+            password: password) { response in
+                switch response {
+                case .success(let data):
+                    guard let data = data as? LoginResponse else { return }
+                    print("🔥 \(data)")
+                default:
+                    print("❌ \(response)")
+                    return
+                }
+            }
+    }
 }
 
