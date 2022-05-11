@@ -10,9 +10,8 @@
 		A90900722805643E00089CCA /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900712805643E00089CCA /* Const.swift */; };
 		A9090074280564FD00089CCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9090073280564FD00089CCA /* Login.storyboard */; };
 		A90900762805667A00089CCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900752805667A00089CCA /* Main.storyboard */; };
-		A90900782805668600089CCA /* SignupName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900772805668600089CCA /* SignupName.storyboard */; };
+		A90900782805668600089CCA /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900772805668600089CCA /* Signup.storyboard */; };
 		A909007A2805669300089CCA /* Success.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900792805669300089CCA /* Success.storyboard */; };
-		A909007C280566C900089CCA /* SignupPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A909007B280566C900089CCA /* SignupPassword.storyboard */; };
 		A909007E280595C200089CCA /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909007D280595C200089CCA /* Storyboard.swift */; };
 		A9090080280595CA00089CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909007F280595CA00089CCA /* ViewController.swift */; };
 		A90900AD280AC5BA00089CCA /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90900AC280AC5BA00089CCA /* TabBar.storyboard */; };
@@ -60,9 +59,8 @@
 		A90900712805643E00089CCA /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A9090073280564FD00089CCA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A90900752805667A00089CCA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A90900772805668600089CCA /* SignupName.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupName.storyboard; sourceTree = "<group>"; };
+		A90900772805668600089CCA /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		A90900792805669300089CCA /* Success.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Success.storyboard; sourceTree = "<group>"; };
-		A909007B280566C900089CCA /* SignupPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupPassword.storyboard; sourceTree = "<group>"; };
 		A909007D280595C200089CCA /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		A909007F280595CA00089CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A90900AC280AC5BA00089CCA /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -290,9 +288,8 @@
 		A932745B2800043D001B0EDB /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				A90900772805668600089CCA /* SignupName.storyboard */,
+				A90900772805668600089CCA /* Signup.storyboard */,
 				A932745427FFFB0C001B0EDB /* SignupNameViewController.swift */,
-				A909007B280566C900089CCA /* SignupPassword.storyboard */,
 				A932745627FFFB1D001B0EDB /* SignupPasswordViewController.swift */,
 			);
 			path = Signup;
@@ -429,8 +426,7 @@
 				A932744427FFE176001B0EDB /* Assets.xcassets in Resources */,
 				A90900B8280AC6A000089CCA /* Reels.storyboard in Resources */,
 				A90900AD280AC5BA00089CCA /* TabBar.storyboard in Resources */,
-				A909007C280566C900089CCA /* SignupPassword.storyboard in Resources */,
-				A90900782805668600089CCA /* SignupName.storyboard in Resources */,
+				A90900782805668600089CCA /* Signup.storyboard in Resources */,
 				A90900762805667A00089CCA /* Main.storyboard in Resources */,
 				A97D30552817EEBA00C1D7D0 /* FeedTableViewCell.xib in Resources */,
 			);

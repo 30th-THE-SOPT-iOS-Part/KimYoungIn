@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupBtnDidTap(_ sender: Any) {
-        let signupNameSB = UIStoryboard.init(name: Const.Storyboard.Name.signupName, bundle: nil)
+        let signupNameSB = UIStoryboard.init(name: Const.Storyboard.Name.signup, bundle: nil)
         guard let signupNameVC = signupNameSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupNameVC) as? SignupNameViewController else { return }
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
