@@ -28,6 +28,7 @@ class SignupPasswordViewController: UIViewController {
         let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
         guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
         successVC.name = self.name
+        successVC.password = passwordTextField.text
         successVC.modalPresentationStyle = .fullScreen
         self.present(successVC, animated: true)
         self.navigationController?.popToRootViewController(animated: true)

@@ -33,6 +33,8 @@
 		A923CC0D282BA10C00608B3F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC0C282BA10C00608B3F /* APIConstants.swift */; };
 		A923CC0F282BA12500608B3F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC0E282BA12500608B3F /* LoginModel.swift */; };
 		A923CC11282BA13F00608B3F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC10282BA13F00608B3F /* SignupModel.swift */; };
+		A923CC15282C179000608B3F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC14282C179000608B3F /* BaseResponse.swift */; };
+		A923CC18282C17F500608B3F /* NetworkBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC17282C17F500608B3F /* NetworkBase.swift */; };
 		A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743A27FFE175001B0EDB /* AppDelegate.swift */; };
 		A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743C27FFE175001B0EDB /* SceneDelegate.swift */; };
 		A932743F27FFE175001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932743E27FFE175001B0EDB /* LoginViewController.swift */; };
@@ -82,6 +84,8 @@
 		A923CC0C282BA10C00608B3F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		A923CC0E282BA12500608B3F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		A923CC10282BA13F00608B3F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		A923CC14282C179000608B3F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		A923CC17282C17F500608B3F /* NetworkBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBase.swift; sourceTree = "<group>"; };
 		A932743727FFE175001B0EDB /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932743A27FFE175001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932743C27FFE175001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 			children = (
 				A923CC0C282BA10C00608B3F /* APIConstants.swift */,
 				A923CC0A282BA0F200608B3F /* NetworkResult.swift */,
+				A923CC16282C17CA00608B3F /* Base */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -237,6 +242,15 @@
 				A923CC08282BA0D600608B3F /* UserService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		A923CC16282C17CA00608B3F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A923CC14282C179000608B3F /* BaseResponse.swift */,
+				A923CC17282C17F500608B3F /* NetworkBase.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		A932742E27FFE175001B0EDB = {
@@ -490,6 +504,8 @@
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,
 				A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */,
 				A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */,
+				A923CC18282C17F500608B3F /* NetworkBase.swift in Sources */,
+				A923CC15282C179000608B3F /* BaseResponse.swift in Sources */,
 				A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */,
 				A90900C4280AC6D700089CCA /* ShopViewController.swift in Sources */,
 				A97D30502817EAC000C1D7D0 /* FeedDataModel.swift in Sources */,
