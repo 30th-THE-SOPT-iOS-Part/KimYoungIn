@@ -68,21 +68,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let width = UIScreen.main.bounds.width
-//        var cellHeight: CGFloat
-//        
-//        switch indexPath.section {
-//        case 0:
-//            cellHeight = width * (82/375)
-//        case 1:
-//            cellHeight = width * (488/375)
-//        default:
-//            cellHeight = 0
-//        }
-//        
-//        return cellHeight
-//    }
+
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -91,18 +77,14 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count: Int
-        
         switch section {
         case 0:
-            count = 1
+            return 1
         case 1:
-            count = FeedDataModel.sampleData.count
+            return FeedDataModel.sampleData.count
         default:
-            count = 0
+            return 0
         }
-        
-        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
