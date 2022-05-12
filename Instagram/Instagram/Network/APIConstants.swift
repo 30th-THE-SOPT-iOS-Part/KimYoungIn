@@ -14,4 +14,6 @@ struct APIConstants {
     // MARK: - Feature URL
     static let loginURL = baseURL + "/auth/signin"
     static let signupURL = baseURL + "/auth/signup"
+    
+    static let imageURL = "https://picsum.photos/v2/list"
 }
