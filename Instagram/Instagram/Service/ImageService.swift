@@ -17,11 +17,16 @@ class ImageService {
     {
         let url = APIConstants.imageURL
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
-        
+        let param: Parameters = [
+            "page": 6,
+            "limit": 4
+        ]
+
+    
         let dataRequest = AF.request(url,
                                      method: .get,
-                                     parameters: nil,
-                                     encoding: JSONEncoding.default,
+                                     parameters: param,
+                                     encoding: URLEncoding.default,
                                      headers: header)
         
         dataRequest.responseData { response in
