@@ -13,7 +13,6 @@ extension UIImageView {
     func urlToImg(_ imgURL: String) {
         let url = URL(string: imgURL)
         if url != nil {
-            print("✨ \(imgURL)")
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: url!)
                 DispatchQueue.main.async {

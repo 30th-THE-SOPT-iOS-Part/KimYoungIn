@@ -21,7 +21,6 @@ class ImageService {
             "page": 6,
             "limit": 4
         ]
-
     
         let dataRequest = AF.request(url,
                                      method: .get,
