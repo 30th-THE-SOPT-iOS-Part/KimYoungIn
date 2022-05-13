@@ -9,8 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var images: [ImageData]?
-    
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
