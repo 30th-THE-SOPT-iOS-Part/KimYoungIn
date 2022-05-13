@@ -34,7 +34,6 @@
 		A923CC0F282BA12500608B3F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC0E282BA12500608B3F /* LoginModel.swift */; };
 		A923CC11282BA13F00608B3F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC10282BA13F00608B3F /* SignupModel.swift */; };
 		A923CC15282C179000608B3F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC14282C179000608B3F /* BaseResponse.swift */; };
-		A923CC18282C17F500608B3F /* NetworkBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC17282C17F500608B3F /* NetworkBase.swift */; };
 		A923CC1A282C31C900608B3F /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC19282C31C900608B3F /* ImageModel.swift */; };
 		A923CC1D282C322D00608B3F /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC1C282C322D00608B3F /* ImageService.swift */; };
 		A923CC21282C3DB000608B3F /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC20282C3DB000608B3F /* UIImageView+.swift */; };
@@ -88,7 +87,6 @@
 		A923CC0E282BA12500608B3F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		A923CC10282BA13F00608B3F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		A923CC14282C179000608B3F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
-		A923CC17282C17F500608B3F /* NetworkBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBase.swift; sourceTree = "<group>"; };
 		A923CC19282C31C900608B3F /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		A923CC1C282C322D00608B3F /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A923CC20282C3DB000608B3F /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				A923CC14282C179000608B3F /* BaseResponse.swift */,
-				A923CC17282C17F500608B3F /* NetworkBase.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				A932743B27FFE175001B0EDB /* AppDelegate.swift in Sources */,
 				A90900C8280ACD8B00089CCA /* TabBarController.swift in Sources */,
 				A932743D27FFE175001B0EDB /* SceneDelegate.swift in Sources */,
-				A923CC18282C17F500608B3F /* NetworkBase.swift in Sources */,
 				A923CC21282C3DB000608B3F /* UIImageView+.swift in Sources */,
 				A923CC15282C179000608B3F /* BaseResponse.swift in Sources */,
 				A90900C6280AC6DD00089CCA /* ProfileViewController.swift in Sources */,
