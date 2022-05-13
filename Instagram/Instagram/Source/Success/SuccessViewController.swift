@@ -49,7 +49,7 @@ extension SuccessViewController {
             password: password) { response in
                 switch response {
                 case .success(let data):
-                    guard let data = data as? SignupResponse else { return }
+                    guard let data = data as? BaseResponse<Signup> else { return }
                     self.alertPresent(message: "회원가입 성공", sb: Const.Storyboard.Name.login, vc: Const.ViewController.Identifier.loginVC)
                     print("🔥 \(data)")
                 default:

@@ -7,13 +7,6 @@
 
 import Foundation
 
-struct SignupResponse: Codable {
-    let status: Int
-    let success: Bool?
-    let message: String
-    let data: SignupData?
-}
-
-struct SignupData: Codable {
+struct Signup: Codable {
     let id: Int
 }

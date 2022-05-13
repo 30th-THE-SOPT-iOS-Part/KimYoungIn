@@ -15,8 +15,8 @@ struct NetworkBase {
         else { return .pathErr }
         
         switch statusCode {
-        case 200 ..< 300: return .success(decodedData as Any)
-        case 401 ..< 500: return .requestErr(decodedData as Any)
+        case 200 ..< 300: return .success(decodedData)
+        case 401 ..< 500: return .requestErr(decodedData)
         case 500: return .serverErr
         default: return .networkFail
         }

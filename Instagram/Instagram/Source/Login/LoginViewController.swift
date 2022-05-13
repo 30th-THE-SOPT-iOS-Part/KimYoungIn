@@ -105,7 +105,7 @@ extension LoginViewController {
             password: password) { response in
                 switch response {
                 case .success(let data):
-                    guard let data = data as? LoginResponse else { return }
+                    guard let data = data as? BaseResponse<Login> else { return }
                     self.alertPresent(message: "로그인 성공", sb: Const.Storyboard.Name.tabBar, vc: Const.TabBarController.Identifier.tabBarController)
                     print("🔥 \(data)")
                 default:
