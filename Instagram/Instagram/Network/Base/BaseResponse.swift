@@ -1,5 +1,5 @@
 //
-//  BaseNetwork.swift
+//  BaseResponse.swift
 //  Instagram
 //
 //  Created by 김영인 on 2022/05/12.

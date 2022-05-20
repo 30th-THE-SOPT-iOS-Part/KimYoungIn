@@ -33,24 +33,11 @@ class ImageService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = self.judgeImageStatus(by: statusCode, value)
+                let networkResult = NetworkBase.judgeOtherStatus(by: statusCode, value, [ImageData].self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
             }
-        }
-    }
-    
-    func judgeImageStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(ImageResponse.self, from: data)
-        else { return .pathErr }
-        
-        switch statusCode {
-        case 200 ..< 300: return .success(decodedData)
-        case 401 ..< 500: return .requestErr(decodedData)
-        case 500: return .serverErr
-        default: return .networkFail
         }
     }
     

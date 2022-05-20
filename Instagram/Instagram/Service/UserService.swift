@@ -34,27 +34,13 @@ class UserService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = self.judgeLoginStatus(by: statusCode, value)
+                let networkResult = NetworkBase.judgeStatus(by: statusCode, value, Login.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
             }
         }
     }
-    
-    func judgeLoginStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(BaseResponse<Login>.self, from: data)
-        else { return .pathErr }
-        
-        switch statusCode {
-        case 200 ..< 300: return .success(decodedData)
-        case 401 ..< 500: return .requestErr(decodedData)
-        case 500: return .serverErr
-        default: return .networkFail
-        }
-    }
-    
     
     func signup(name: String,
                 email: String,
@@ -80,25 +66,11 @@ class UserService {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
-                let networkResult = self.judgeSignupStatus(by: statusCode, value)
+                let networkResult = NetworkBase.judgeStatus(by: statusCode, value, Signup.self)
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
             }
         }
     }
-    
-    func judgeSignupStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(BaseResponse<Signup>.self, from: data)
-        else { return .pathErr }
-        
-        switch statusCode {
-        case 200 ..< 300: return .success(decodedData)
-        case 401 ..< 500: return .requestErr(decodedData)
-        case 500: return .serverErr
-        default: return .networkFail
-        }
-    }
-    
 }

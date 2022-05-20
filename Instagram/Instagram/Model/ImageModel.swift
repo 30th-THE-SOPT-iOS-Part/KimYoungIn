@@ -10,5 +10,3 @@ import Foundation
 struct ImageData: Codable {
     let download_url: String?
 }
-
-typealias ImageResponse = [ImageData]
