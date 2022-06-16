@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
@@ -23,19 +23,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnDidTap(_ sender: Any) {
-        let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
-        guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
-        successVC.name = nameTextField.text
-        successVC.modalPresentationStyle = .fullScreen
-        self.present(successVC, animated: true)
+        login()
+//        let successSB = UIStoryboard.init(name: Const.Storyboard.Name.success, bundle: nil)
+//        guard let successVC = successSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.successVC) as? SuccessViewController else { return }
+//        successVC.name = nameTextField.text
+//        successVC.modalPresentationStyle = .fullScreen
+//        self.present(successVC, animated: true)
     }
     
     @IBAction func signupBtnDidTap(_ sender: Any) {
-        let signupNameSB = UIStoryboard.init(name: Const.Storyboard.Name.signupName, bundle: nil)
+        let signupNameSB = UIStoryboard.init(name: Const.Storyboard.Name.signup, bundle: nil)
         guard let signupNameVC = signupNameSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupNameVC) as? SignupNameViewController else { return }
         self.navigationController?.pushViewController(signupNameVC, animated: true)
     }
-
+    
     private func setUI() {
         setButton()
         setTextField()
@@ -94,3 +95,24 @@ class LoginViewController: UIViewController {
     
 }
 
+extension LoginViewController {
+    func login() {
+        guard let email = nameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        UserService.shared.login(
+            email: email,
+            password: password) { response in
+                switch response {
+                case .success(let data):
+                    guard let data = data as? BaseResponse<Login> else { return }
+                    self.alertPresent(message: "로그인 성공", sb: Const.Storyboard.Name.tabBar, vc: Const.TabBarController.Identifier.tabBarController)
+                    print("🔥 \(data)")
+                default:
+                    self.alert(message: "로그인 실패")
+                    print("❌ \(response)")
+                    return
+                }
+            }
+    }
+}

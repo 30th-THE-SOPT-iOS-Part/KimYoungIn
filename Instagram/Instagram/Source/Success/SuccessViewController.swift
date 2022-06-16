@@ -10,6 +10,7 @@ import UIKit
 class SuccessViewController: UIViewController {
     
     var name: String?
+    var password: String?
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
@@ -19,9 +20,10 @@ class SuccessViewController: UIViewController {
     }
     
     @IBAction func successBtnDidTap(_ sender: Any) {
-        let tabBarSB = UIStoryboard(name: Const.Storyboard.Name.tabBar, bundle: nil)
-        guard let tabBarController = tabBarSB.instantiateViewController(withIdentifier: Const.TabBarController.Identifier.tabBarController) as? TabBarController else { return }
-        changeRootViewController(tabBarController)  // tabBarController를 최상위 뷰컨으로 바꾸기
+        signup()
+//        let tabBarSB = UIStoryboard(name: Const.Storyboard.Name.tabBar, bundle: nil)
+//        guard let tabBarController = tabBarSB.instantiateViewController(withIdentifier: Const.TabBarController.Identifier.tabBarController) as? TabBarController else { return }
+//        changeRootViewController(tabBarController)  
     }
     
     @IBAction func otherAccountBtnDidTap(_ sender: Any) {
@@ -34,4 +36,27 @@ class SuccessViewController: UIViewController {
         }
     }
     
+}
+
+extension SuccessViewController {
+    func signup() {
+        guard let email = name else { return }
+        guard let password = password else { return }
+        
+        UserService.shared.signup(
+            name: email,
+            email: email,
+            password: password) { response in
+                switch response {
+                case .success(let data):
+                    guard let data = data as? BaseResponse<Signup> else { return }
+                    self.alertPresent(message: "회원가입 성공", sb: Const.Storyboard.Name.login, vc: Const.ViewController.Identifier.loginVC)
+                    print("🔥 \(data)")
+                default:
+                    self.alert(message: "회원가입 실패")
+                    print("❌ \(response)")
+                    return
+                }
+            }
+    }
 }

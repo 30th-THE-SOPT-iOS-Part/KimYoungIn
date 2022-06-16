@@ -23,8 +23,7 @@ class SignupNameViewController: UIViewController {
     }
     
     @IBAction func goToPasswordVC(_ sender: Any) {
-        let signupPasswordSB = UIStoryboard.init(name: Const.Storyboard.Name.signupPassword, bundle: nil)
-        guard let signupPasswordVC = signupPasswordSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupPasswordVC) as? SignupPasswordViewController else { return }
+        guard let signupPasswordVC = storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signupPasswordVC) as? SignupPasswordViewController else { return }
         signupPasswordVC.name = nameTextField.text
         self.navigationController?.pushViewController(signupPasswordVC, animated: true)
     }

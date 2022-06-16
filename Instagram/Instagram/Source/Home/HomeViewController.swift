@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeViewController: UIViewController {
-
+    
+    private var feedDataList = FeedDataModel.sampleData
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getImage()
         setUI()
     }
     
@@ -68,7 +71,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDelegate {
-
+    
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -81,7 +84,7 @@ extension HomeViewController: UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return FeedDataModel.sampleData.count
+            return feedDataList.count
         default:
             return 0
         }
@@ -94,8 +97,7 @@ extension HomeViewController: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = homeTableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
-            cell.setData(FeedDataModel.sampleData[indexPath.row])
-            
+            cell.setData(feedDataList[indexPath.row])
             cell.delegate = self
             
             return cell
@@ -109,4 +111,24 @@ extension HomeViewController: TableViewCellDelegate {
     func likeBtnDidTapEvent(_ msg: String) {
         print(msg)
     }
+}
+
+extension HomeViewController {
+    func getImage() {
+        ImageService.shared.getImage() { response in
+            switch response {
+            case .success(let data):
+                guard let images = data as? [ImageData] else { return }
+                for idx in 0 ... self.feedDataList.count - 1 {
+                    self.feedDataList[idx].feedImage = images[idx].download_url ?? ""
+                }
+                self.homeTableView.reloadData()
+                print("🔥 \(data)")
+            default:
+                print("❌ \(response)")
+                return
+            }
+        }
+    }
+    
 }

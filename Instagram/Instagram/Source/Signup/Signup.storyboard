@@ -94,6 +94,92 @@
             </objects>
             <point key="canvasLocation" x="1686.9565217391305" y="93.75"/>
         </scene>
+        <!--Signup Password View Controller-->
+        <scene sceneID="WLC-jx-Ntm">
+            <objects>
+                <viewController storyboardIdentifier="SignupPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zu5-9B-eZ2" customClass="SignupPasswordViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bOr-fC-5yE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-zz-3ew" userLabel="비밀번호 만들기">
+                                <rect key="frame" x="0.0" y="84" width="414" height="222"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8z-cb-emG">
+                                        <rect key="frame" x="113" y="0.0" width="188.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 저장할 수 있으므로 iCloud 기기에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54w-2E-BHO">
+                                        <rect key="frame" x="61" y="56" width="292" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="292" id="vw1-JA-d2F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-QJ-J0M">
+                                        <rect key="frame" x="16" y="112" width="382" height="45"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="IBB-fE-PrR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPg-rO-CmA">
+                                        <rect key="frame" x="16" y="177" width="382" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Fif-N6-D9g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="다음">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToSuccessVC:" destination="Zu5-9B-eZ2" eventType="touchUpInside" id="uhr-rP-736"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aGk-QJ-J0M" secondAttribute="trailing" constant="16" id="cQ1-nX-M1R"/>
+                                    <constraint firstItem="aGk-QJ-J0M" firstAttribute="leading" secondItem="J6N-zz-3ew" secondAttribute="leading" constant="16" id="dnC-CM-5yA"/>
+                                    <constraint firstAttribute="trailing" secondItem="sPg-rO-CmA" secondAttribute="trailing" constant="16" id="exo-rQ-qTE"/>
+                                    <constraint firstItem="sPg-rO-CmA" firstAttribute="leading" secondItem="J6N-zz-3ew" secondAttribute="leading" constant="16" id="jdp-IJ-1p2"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1N-fr-3KY">
+                                <rect key="frame" x="10" y="54" width="24.5" height="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backBtnDidTap:" destination="Zu5-9B-eZ2" eventType="touchUpInside" id="gyw-Jx-JUw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FOp-Hk-n06"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J6N-zz-3ew" firstAttribute="top" secondItem="j1N-fr-3KY" secondAttribute="bottom" constant="6" id="RsX-y3-yxW"/>
+                            <constraint firstItem="J6N-zz-3ew" firstAttribute="leading" secondItem="FOp-Hk-n06" secondAttribute="leading" id="amP-ln-2hc"/>
+                            <constraint firstItem="j1N-fr-3KY" firstAttribute="leading" secondItem="FOp-Hk-n06" secondAttribute="leading" constant="10" id="d71-3c-NV2"/>
+                            <constraint firstAttribute="trailing" secondItem="J6N-zz-3ew" secondAttribute="trailing" id="iOn-87-XVD"/>
+                            <constraint firstItem="j1N-fr-3KY" firstAttribute="top" secondItem="FOp-Hk-n06" secondAttribute="top" constant="10" id="t6A-25-DmF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="sPg-rO-CmA" id="5gE-Je-K6D"/>
+                        <outlet property="passwordTextField" destination="aGk-QJ-J0M" id="WLN-MX-lU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eue-V6-v8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="94"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="24.5" height="24"/>

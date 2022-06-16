@@ -44,7 +44,7 @@ class FeedTableViewCell: UITableViewCell {
     func setData(_ feedData: FeedDataModel) {
         profileImg.image = feedData.profileImage
         profileName.text = feedData.profileName
-        feedImg.image = feedData.feedImage
+        feedImg.urlToImg(feedData.feedImage ?? "")
         likeLabel.text = "좋아요 \(feedData.likeCount)개"
         nameLabel.text = feedData.profileName
         contentLabel.text = feedData.feedContent
